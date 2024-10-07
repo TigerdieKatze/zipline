@@ -28,10 +28,11 @@ services:
       - CORE_DATABASE_URL=postgres://postgres:postgres@postgres/postgres
       - CORE_LOGGER=true
     volumes:
-      - './uploads:/zipline/uploads'
+      - 'zl_uploads:/zipline/uploads'
       - './public:/zipline/public'
     depends_on:
       - 'postgres'
 
 volumes:
   pg_data:
+  zl_uploads:
